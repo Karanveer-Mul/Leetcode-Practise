@@ -4,9 +4,9 @@ curNode = head
 prevNode = None
 
 while curNode != None and curNode.next != None:
-    tmp = curNode
-    tmp.next = prevNode
-    curNode = curNode.next
-    prevNode = tmp
+    nextNode = curNode.next
+    curNode.next = prevNode
+    prevNode = curNode
+    curNode = nextNode
 
 print(prevNode) 
